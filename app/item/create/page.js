@@ -2,6 +2,7 @@
 import { useState } from "react"
 import {useRouter} from "next/navigation"
 import useAuth from "../../utils/useAuth"
+import ImgInput from "../../components/imgInput"
 
 const CreateItem = () => {
 
@@ -36,6 +37,7 @@ const CreateItem = () => {
       alert(jsonData.message)
       router.push("/")
     } catch(err) {
+      console.log(err)
       alert("アイテム作成失敗")
     }
   }
@@ -45,6 +47,7 @@ const CreateItem = () => {
     return(
       <div>
       <h1 className="page-title">アイテム作成</h1>
+      <ImgInput setImage={setImage} />
 
       <form onSubmit={handleSubmit}>
         <input value={title} onChange={(e) =>setTitle(e.target.value)} type="text" name="title" placeholder="アイテム名" required></input>

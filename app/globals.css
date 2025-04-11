@@ -232,6 +232,7 @@ header * li a:hover{
 }
 
 /* Img Form */
+
 .img-input{
   display: grid;
   grid-template-columns: 0.8fr 0.2fr;
@@ -264,6 +265,11 @@ header * li a:hover{
   opacity: 1;
   cursor: not-allowed;
 }
+
+/* .imgContainer {
+  width: 75px;
+  height: 50px;
+} */
 
 @media(max-width: 400px){
   .img-input{
